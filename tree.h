@@ -1,9 +1,11 @@
 //
-// Created by Mattéo on 14/11/2024.
+// Created by Mathis on 14/11/2024.
 //
 #include <stdio.h>
 #include <stdlib.h>
-#include "loc.h"
+#include "moves.h"
+#include "map.h"
+
 
 #ifndef UNTITLED1_TREE_H
 #define UNTITLED1_TREE_H
@@ -18,6 +20,7 @@ typedef struct noeud{
     int phase;
     int *chemin;
     int *mouv;
+    t_localisation loc;
 }NOEUD;
 
 typedef struct
@@ -27,4 +30,4 @@ typedef struct
 
 ARBRE* createtree();
 
-void remplir_tree(ARBRE *,int, int);
+void remplir_tree(ARBRE *,int, int, t_localisation, t_map);
